@@ -88,7 +88,11 @@ in central park on January 14?
 Use the pick up time for your calculations.
 
 Enter the zone name (not id). If the zone name is unknown (missing), write "Unknown" 
+### Answer
+237 Upper East Side South 
 
+select "DOLocationID", count ("DOLocationID") Total_dropoff from yellow_taxi_data where "PULocationID"=43 and tpep_pickup_datetime >= '2021-01-14' and tpep_pickup_datetime < '2021-01-15' group by "DOLocationID";
+select * from zones where "LocationID"=237;
 
 ## Question 6. Most expensive locations
 
